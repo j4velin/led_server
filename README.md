@@ -31,7 +31,7 @@ Usage
      ```javascript
      [ 0, 0, 255 ]
      ```
-* **POST** on `.../effec/<name>` triggers the effect `effect_<name>.py`:
+* **POST** on `.../effect/<name>` triggers the effect `effect_<name>.py`:
   * MimeType: application/json
   * body depends on the effect, example for the snake effect (POST on .../effect/snake):
      ```javascript
