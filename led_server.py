@@ -7,6 +7,7 @@ from flask import request
 import threading
 import Queue
 
+# required configureation
 NUM_LEDS   = 50
 SPI_PORT   = 0
 SPI_DEVICE = 0
