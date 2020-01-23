@@ -10,6 +10,7 @@ Install
 * sudo apt-get install python-pip -y
 * sudo pip install adafruit-ws2801
 * sudo pip install flask
+* python led_server.py &
 
 Usage
 -----
