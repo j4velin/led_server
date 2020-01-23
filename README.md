@@ -1,7 +1,7 @@
 LEDserver
 =========
 
-A simple RESTful HTTP API to control WS2801 LED stripes. Additional "effects" can be added by placing in `effect_<name>.py` file in the same folder (see effect_snake.py for an example)
+A simple RESTful HTTP API to control WS2801 LED stripes. Additional "effects" can be added by placing an `effect_<name>.py` file in the same folder (see effect_snake.py for an example)
 
 Install
 -------
