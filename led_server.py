@@ -7,9 +7,10 @@ from flask import request
 import threading
 import Queue
 
-NUM_LEDS   = 50
-SPI_PORT   = 0
-SPI_DEVICE = 0
+NUM_LEDS            = 50
+EFFECT_START_LED    = 0
+SPI_PORT            = 0
+SPI_DEVICE          = 0
 
 http_server = Flask(__name__)
 leds = Adafruit_WS2801.WS2801Pixels(NUM_LEDS, spi=SPI.SpiDev(SPI_PORT, SPI_DEVICE))
@@ -70,6 +71,7 @@ def run_effect(name):
     effect = __import__("effect_" + name)
     properties = request.json
     properties["num_leds"] = NUM_LEDS
+    properties["start_offset"] = EFFECT_START_LED
     if not effect_queue.full():
         effect_queue.put((effect, properties))
     #effect.execute(leds, properties)
